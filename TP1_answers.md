@@ -1,6 +1,6 @@
 # TP1 answers
 
-Team members: Aicha Kouidri, <name 2>, <name 3>, <name 4>
+Team members: Aicha Kouidri, Soundous Hamami, Safa Teachtine
 
 ## Exercise 1
 
