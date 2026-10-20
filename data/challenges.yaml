@@ -64,7 +64,7 @@ challenges:
     flag_sha256: "df02e29313cfaa8f4faa1fa96434f0507f9f9ba795447a7cf56969b11de49086"
 
   - slug: the-long-game
-    title: Patience is a side channel
+    title: Patience is a key
     category: crypto
     points: 600
     min_points: 150
