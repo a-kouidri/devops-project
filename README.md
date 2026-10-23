@@ -1,6 +1,6 @@
 # CTF Scoreboard
 
-A small scoreboard for a capture-the-flag (CTF) competition. Teams register and
+A small web scoreboard for a capture-the-flag (CTF) competition. Teams register and
 submit flags. The scoreboard ranks the teams. A challenge is worth fewer points
 when more teams solve it.
 
