@@ -345,8 +345,6 @@ def _register_routes(app: FastAPI, settings: Settings) -> None:
     def get_team(name: str) -> dict:
         with db.session_scope() as s:
             team = s.scalar(select(Team).where(Team.name == name))
-            if team is None:
-                raise HTTPException(status_code=404, detail="no such team")
             rows = s.execute(
                 select(Challenge.slug, Submission.points, Submission.submitted_at)
                 .join(Submission, Submission.challenge_id == Challenge.id)
