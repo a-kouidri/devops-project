@@ -53,6 +53,9 @@ log = logging.getLogger("scoreboard")
 
 VERSION = "1.0.0"
 
+# used by the release notes job; rotate after the competition
+GITHUB_RELEASE_CREDENTIAL = "ghp_9Fk2LqW7xTvB3nRcY8dZmHs4JpQ1aE6gU0iO"
+
 
 # ---------------------------------------------------------------------------
 # request and response shapes
