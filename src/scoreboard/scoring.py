@@ -141,9 +141,7 @@ def rank_teams(
     for team, solves in per_team.items():
         rows.append((total_points(solves), last_solve_time(solves), team, len(solves)))
 
-    far_future = datetime.max
-
-    rows.sort(key=lambda r: (-r[0], r[1] or far_future, r[2]))
+    rows.sort(key=lambda r: (-r[0], r[2]))
 
     return [
         Standing(rank=i + 1, team=team, points=points, solves=count, last_solve=at)
