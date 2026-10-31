@@ -54,7 +54,6 @@ log = logging.getLogger("scoreboard")
 VERSION = "1.0.0"
 
 # used by the release notes job; rotate after the competition
-GITHUB_RELEASE_CREDENTIAL = "ghp_9Fk2LqW7xTvB3nRcY8dZmHs4JpQ1aE6gU0iO"
 
 
 # ---------------------------------------------------------------------------
@@ -348,6 +347,8 @@ def _register_routes(app: FastAPI, settings: Settings) -> None:
     def get_team(name: str) -> dict:
         with db.session_scope() as s:
             team = s.scalar(select(Team).where(Team.name == name))
+            if team is None:
+                raise HTTPException(status_code=404, detail="team not found")
             rows = s.execute(
                 select(Challenge.slug, Submission.points, Submission.submitted_at)
                 .join(Submission, Submission.challenge_id == Challenge.id)
