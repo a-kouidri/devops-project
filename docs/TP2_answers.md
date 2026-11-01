@@ -37,7 +37,7 @@ Test 1 failed by exception (`AttributeError`). Test 2 failed by assertion (`Asse
 
 ## Exercise 5
 
-We fixed the application code (not the tests), removed the secret, and changed the dependency version in `requirements.txt` from `requests==2.31.0` to `requests==2.33.0`. The pull request became green.
+We fixed the application code (not the tests), removed the secret, and undid the change in `requirements.txt` by restoring `requests` to its original pinned version `requests==2.34.2` (the change had lowered it to `requests==2.31.0`). The pull request became green.
 
 (a) `requests` is a direct dependency.
 
